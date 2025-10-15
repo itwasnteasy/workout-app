@@ -1,7 +1,7 @@
 const CACHE_NAME = 'workout-app-v1';
 const urlsToCache = [
-  '/workout-app/',
-  '/workout-app/index.html',
+  './',
+  './index.html',
   'https://raw.githubusercontent.com/itwasnteasy/workout-audio/main/StimPack.mp3',
   'https://raw.githubusercontent.com/itwasnteasy/workout-audio/main/10-seconds-39474.mp3'
 ];

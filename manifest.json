@@ -8,15 +8,15 @@
   "theme_color": "#667eea",
   "orientation": "portrait",
   "icons": [
-    {
-      "src": "https://via.placeholder.com/192x192/667eea/ffffff?text=WO",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "https://via.placeholder.com/512x512/667eea/ffffff?text=WO",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+  {
+    "src": "ds_192x192.jpg",
+    "sizes": "192x192",
+    "type": "image/jpg"
+  },
+  {
+    "src": "ds_512x512.jpg",
+    "sizes": "512x512",
+    "type": "image/jpg"
+  }
+]
 }

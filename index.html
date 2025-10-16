@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#667eea">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <style>
+           <style>
         * {
             margin: 0;
             padding: 0;
@@ -1080,6 +1080,7 @@ let weeksExpanded = false;
 
 const stimPackSound = new Audio('https://raw.githubusercontent.com/itwasnteasy/workout-audio/main/StimPack.mp3');
 const restAlertSound = new Audio('https://raw.githubusercontent.com/itwasnteasy/workout-audio/main/10-seconds-39474.mp3');
+const restStartSound = new Audio('https://github.com/itwasnteasy/workout-audio/raw/refs/heads/main/allday.mp3');
 
 let wakeLock = null;
 
@@ -8227,6 +8228,9 @@ const arrangedDays = (currentProgram === 'pb10' || currentProgram === 'pb20' || 
         console.log('Wake Lock not supported or denied:', err);
     }
     
+    // Play sound when rest timer starts
+    restStartSound.play();
+    
     restTimer.isRunning = true;
     document.getElementById('restStartBtn').style.display = 'none';
     document.getElementById('restStopBtn').style.display = 'inline-block';
@@ -8425,6 +8429,7 @@ function closeRestTimer() {
 </body>
 
 </html>
+
 
 
 

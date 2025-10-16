@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#667eea">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <style>
+        <style>
         * {
             margin: 0;
             padding: 0;
@@ -8375,29 +8375,7 @@ function closeRestTimer() {
             updateWeekContent();
         });
 
-        // Touch/swipe functionality for mobile
-        let startX = null;
-        
-        document.addEventListener('touchstart', function(e) {
-            startX = e.touches[0].clientX;
-        });
-        
-        document.addEventListener('touchend', function(e) {
-            if (startX === null) return;
-            
-            const endX = e.changedTouches[0].clientX;
-            const diffX = startX - endX;
-            
-            if (Math.abs(diffX) > 50) {
-                if (diffX > 0 && currentWeek < (currentProgram === 'pb20' ? 12 : (currentProgram === 'pb10' ? 11 : 10))) {
-                    showWeek(currentWeek + 1);
-                } else if (diffX < 0 && currentWeek > 1) {
-                    showWeek(currentWeek - 1);
-                }
-            }
-            
-            startX = null;
-    });
+        // Swipe functionality removed to prevent accidental week changes
 
     // Weak Points Guide Functions
     function openWeakPointsGuide() {
@@ -8447,5 +8425,6 @@ function closeRestTimer() {
 </body>
 
 </html>
+
 
 

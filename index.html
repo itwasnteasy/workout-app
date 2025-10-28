@@ -7835,6 +7835,7 @@ function getNextWorkout() {
     
     updateWeekButtons();
     updateWeekContent();
+    localStorage.setItem('last-program', currentProgram);
 }
 
        function updateWeekButtons() {
@@ -7878,6 +7879,7 @@ function getNextWorkout() {
     document.querySelector('.week-selector').classList.remove('show');
     
     updateWeekContent();
+    localStorage.setItem('last-week', currentWeek);        
 }
 
 function expandPrograms() {
@@ -8375,7 +8377,20 @@ function closeRestTimer() {
         // Initialize the app
         document.addEventListener('DOMContentLoaded', function() {
             loadProgress();
-            updateWeekButtons(); // ADD THIS LINE
+            
+            // Restore last viewed program and week
+            const lastProgram = localStorage.getItem('last-program');
+            const lastWeek = localStorage.getItem('last-week');
+            
+            if (lastProgram) {
+                currentProgram = lastProgram;
+                showProgram(lastProgram);
+            }
+            if (lastWeek) {
+                currentWeek = parseInt(lastWeek);
+            }
+            
+            updateWeekButtons();
             updateWeekContent();
         });
 
@@ -8429,6 +8444,7 @@ function closeRestTimer() {
 </body>
 
 </html>
+
 
 
 

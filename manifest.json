@@ -1,22 +1,28 @@
 {
-  "name": "PowerBuilding Workout Tracker",
-  "short_name": "Workout",
-  "description": "Track your powerbuilding workouts",
+  "id": "/workout-app/",
+  "name": "Workout Tracker",
+  "short_name": "Workouts",
+  "description": "Track your PowerBuilding workouts",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#667eea",
   "theme_color": "#667eea",
-  "orientation": "portrait",
+  "orientation": "portrait-primary",
   "icons": [
-  {
-    "src": "ds_192x192.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  },
-  {
-    "src": "ds_512x512.png",
-    "sizes": "512x512",
-    "type": "image/png"
-  }
-]
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "fitness"],
+  "screenshots": []
 }
